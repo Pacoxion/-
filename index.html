@@ -1,0 +1,54 @@
+<!doctype html> 
+<html>  
+    <head> 
+        <title>爱心飘落场景</title>  
+        <meta charset='utf-8'>   
+        <style>   
+           /**/  
+            *{  
+                margin:0;   
+            } 
+            html,body{  
+                width:100%;  
+                height:100%;  
+            }  
+            body{ 
+                background:url('1.jpg') no-repeat top/cover;  
+                overflow:hidden; 
+            }  
+            .snowfall-flakes{ 
+                position:relative; 
+                width:20px; 
+                height:18px; 
+            }  
+            .snowfall-flakes:after,.snowfall-flakes:before {  
+                position:absolute;
+                left:14px;  
+                top:10px;  
+                display:block;  
+                content:'';
+                width:10px;  
+                height:16px;  
+                background:#ff0000;  
+                border-radius:50px 50px 0 0;  
+                transform:rotate(45deg);
+            }  
+            .snowfall-flakes:before{  
+                left:10px;  
+                transform:rotate(-45deg);  
+            }  
+  
+  
+        </style>  
+    </head>  
+    <body>  
+        <audio src='1.mp3' autoplay ></audio>  
+        <script src='jquery.js'></script>  
+        <script src='snowfall.jquery.js'></script>  
+        <script> 
+            $(document).snowfall({  
+                flakeCount:104  
+            })  
+        </script>  
+    </body>  
+</html>  
